@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Society of Debaters (Web Speech)</title>
+    <link rel="stylesheet" href="/public/styles.css" />
+  </head>
+  <body class="container">
+    <h1>Society of Debaters (Lean Web Speech MVP)</h1>
+    <div class="controls">
+      <button id="connectBtn">Connect</button>
+      <button id="muteBtn" disabled>Mute mic</button>
+      <input id="topic" placeholder="Debate topic" />
+      <button id="startBtn" disabled>Start debate</button>
+    </div>
+    <div id="status">disconnected</div>
+    <div class="grid">
+      <div class="glass"><div class="role">Agent A</div><div id="agentAStream" class="stream">…</div></div>
+      <div class="glass"><div class="role">Agent B</div><div id="agentBStream" class="stream">…</div></div>
+      <div class="glass"><div class="role">You</div><div id="youStream" class="stream">…</div></div>
+    </div>
+    <p class="hint">Runs fully in the browser using Chrome Web Speech API. Free, no credits.</p>
+    <script src="/public/app.js"></script>
+  </body>
+</html>

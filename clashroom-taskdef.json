@@ -1,0 +1,36 @@
+{
+  "family": "clashroom-backend",
+  "requiresCompatibilities": ["EC2"],
+  "networkMode": "awsvpc",
+  "cpu": "4096",
+  "memory": "15000",
+  "containerDefinitions": [
+    {
+      "name": "clashroom-backend",
+      "image": "505628473437.dkr.ecr.eu-west-2.amazonaws.com/clashroom-backend:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "hostPort": 8000,
+          "protocol": "tcp"
+        }
+      ],
+      "resourceRequirements": [
+        {
+          "type": "GPU",
+          "value": "1"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/clashroom-backend",
+          "awslogs-region": "eu-west-2",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ],
+  "executionRoleArn": "arn:aws:iam::<your-account-id>:role/ecsTaskExecutionRole"
+}
