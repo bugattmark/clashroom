@@ -5,7 +5,7 @@ html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Arial}
 .glass{backdrop-filter: blur(12px);background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.15);border-radius: 16px; padding: 12px;}
 .role{font-size:12px;opacity:.7;margin-bottom:4px}
-.stream{min-height:28px;white-space:wrap;line-height:1.6}
+.stream{min-height:28px;white-space:pre-wrap;line-height:1.6}
 button{padding:8px 12px;border-radius:10px;border:1px solid #555;background:#3a3a3a;
   color:#eee;cursor:pointer}
 button[disabled]{opacity:.5;cursor:not-allowed}
